@@ -1,0 +1,14 @@
+section:nth-child(2n) {
+  background-color: rgb(153, 195, 231);
+}
+
+section:nth-child(2n+1) {
+  background-color: rgb(137, 202, 172);
+}
+
+/* Flexbox */
+
+#datosgenerales {
+  display: flex; /* or inline-flex */
+  text-align: center;
+}
