@@ -8,4 +8,24 @@ main section:nth-child(2n+1) {
 
 /* Grid: AREAS */
 
+main {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  
+  grid-template-areas: "datosgenerales datosgenerales datosgenerales"
+    "habilidadespersonales habilidadespersonales conocimientos"
+    "trabajosanteriores habilidadesprogramacion proyectosanteriores"
+    "idiomas  medioscontacto";
+    align-items: start;
+  
+}
 
+#datosgenerales { grid-area: datosgenerales; }
+#habilidadespersonales { grid-area: habilidadespersonales; }
+#conocimientos { grid-area: conocimientos; }
+#trabajosanteriores { grid-area: trabajosanteriores; }
+#habilidadesprogramacion { grid-area: habilidadesprogramacion; }
+#proyectosanteriores { grid-area: proyectosanteriores; }
+#idiomas { grid-area: idiomas; }
+#medioscontacto { grid-area: medioscontacto; }
