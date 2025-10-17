@@ -10,7 +10,7 @@ main section:nth-child(2n+1) {
 
 main {
   display: grid;
-  gap: 10px;
+  gap: 5px;
   grid-template-columns: repeat(6, 1fr);
 }
 
