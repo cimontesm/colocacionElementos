@@ -8,24 +8,46 @@ main section:nth-child(2n+1) {
 
 /* Grid: AREAS */
 
-main {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  
-  grid-template-areas: "datosgenerales datosgenerales datosgenerales"
-    "habilidadespersonales habilidadespersonales conocimientos"
-    "trabajosanteriores habilidadesprogramacion proyectosanteriores"
-    "idiomas  medioscontacto";
-    align-items: start;
-  
+#datosgenerales {
+  grid-area: header;
 }
 
-#datosgenerales { grid-area: datosgenerales; }
-#habilidadespersonales { grid-area: habilidadespersonales; }
-#conocimientos { grid-area: conocimientos; }
-#trabajosanteriores { grid-area: trabajosanteriores; }
-#habilidadesprogramacion { grid-area: habilidadesprogramacion; }
-#proyectosanteriores { grid-area: proyectosanteriores; }
-#idiomas { grid-area: idiomas; }
-#medioscontacto { grid-area: medioscontacto; }
+#habilidadespersonales {
+  grid-area: main-left;
+}
+
+#conocimientos {
+  grid-area: main-right;
+}
+
+#trabajosanteriores {
+  grid-area: trabajos;
+}
+
+#habilidadesprogramacion {
+  grid-area: programacion;
+}
+
+#proyectosanteriores {
+  grid-area: proyectos;
+}
+
+#idiomas {
+  grid-area: footer-left;
+}
+
+#medioscontacto {
+  grid-area: footer-right;
+}
+
+
+main {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header header header"
+    "main-left main-left main-left main-right main-right main-right"
+    "trabajos trabajos programacion programacion proyectos proyectos"
+    "footer-left footer-left footer-left footer-right footer-right footer-right"
+}
